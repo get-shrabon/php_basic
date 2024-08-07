@@ -64,17 +64,38 @@ $color = "green";
 $m = "8balls";
 switch ($m) {
     case "8balls":
-        echo "Eight Balls";
+        // echo "Eight Balls";
         break;
 
     case 8:
-        echo "8";
+        // echo "8";
         break;
 
         case "9balls";
-        echo "Nine Balls";
+        // echo "Nine Balls";
         break;
 
     default:
-        echo "Nothing";
+        // echo "Nothing";
 }
+
+
+
+// Functions PHP
+
+include_once "functions.php";
+
+$w = 13;
+if(isEven($w)){
+    // echo "{$w} is a Even Number";
+}
+else {
+    // echo "{$w} is a Odd Number";
+
+}
+
+// Serve Function Called
+
+$sItem = "3 cup";
+$sBrand = "Coffee";
+serve($sItem, $sBrand);
