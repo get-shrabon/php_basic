@@ -70,5 +70,6 @@ foreach($foods as $key=>$value){
 
 // ================== String to covert array with built in function explode() ==================
 
-$foodNames = explode(",", "nodouls, tea, rice, briryani"); 
-var_dump($foodNames);
+$foodNames = explode(", ", "nodouls, tea, rice, briryani"); 
+// var_dump($foodNames);
+// echo $foodNames[2];
