@@ -33,8 +33,9 @@ function sum(int ...$numbers): int
 
 // Recursive Function
 
-function printNumber($counter, $end, $step=1){
-    if($counter >= $end){
+function printNumber($counter, $end, $step = 1)
+{
+    if ($counter >= $end) {
         return;
     }
     $counter += $step;
