@@ -105,8 +105,65 @@ class Hajira
     }
 }
 $hajira1 = new Hajira("Akash", 26);
-$hajira1->result();
+// $hajira1->result();
 
 $hajira2 = new Hajira("SHRABON");
-$hajira2->result();
+// $hajira2->result();
 
+
+
+class Bang
+{
+    public $name;
+    public $host;
+
+    function __construct($setName, $setHost)
+    {
+        $this->name = $setName;
+        $this->host = $setHost;
+    }
+    function Result()
+    {
+        if (empty($this->name) && empty($this->host)) {
+            echo "Name and Host not Provide!!!";
+        } else {
+            if ($this->host == "localhost") {
+                echo "Your provided host is for local machine \n";
+            }
+            echo "Your name is {$this->name} and Host is {$this->host}";
+        }
+    }
+}
+
+$bang1 = new Bang("Mera Bacca", "localhost");
+// $bang1->Result();
+
+
+// Parent and Child scope
+
+class ParentClass
+{
+    protected $name;
+
+    function __construct($name)
+    {
+        $this->name = $name;
+        $this->sayHi();
+    }
+
+    function sayHi()
+    {
+        echo "Hi from {$this->name}\n";
+    }
+}
+
+class ChildClass extends ParentClass
+{
+    function sayHi()
+    {
+        parent::sayHi();
+       echo "Hello Dear\n";
+    }
+}
+
+$cc = new ChildClass("Hoyoy");
